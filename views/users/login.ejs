@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<style>
+.navbar{
+    display: none;
+}
+.main-footer{
+    display: none;
+}
+</style>
+
+<div class="row">
+    <div class="col" style="height: 100vh; background-image: url('https://res.cloudinary.com/fo1ewlbf/image/upload/v1784615292/wanderlust_DEV/j32dx9j6rpeghloeszgl.jpg'); background-size: contain;">
+    </div>
+
+    <div class="col d-flex justify-content-center align-items-center">
+        <div class="col-8">
+            <a href="/">-Back to Home</a>
+            <h2 class="mt-2">Welcome Back!</h2>
+            <p class="text-muted">Login to your DreamStay account</p>
+
+            <form method="post" action="/users/login" novalidate class="needs-validation">
+                <div class="mb-3 mt-4">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="username" id="username" type="text" class="form-control" required>
+                    <div class="invalid-feedback">username required</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" id="password" type="password" class="form-control" required>
+                    <div class="invalid-feedback">Enter valid password</div>
+                </div>
+
+                <div class="d-grid mt-3">
+                    <button class="btn btn-primary mt-3">Login</button>
+                </div>
+            </form>
+
+            <p class="text-center mt-4">Don't have an account? <a href="/users/signup">Register Now</a></p>
+        </div>
+    </div>
+</div>

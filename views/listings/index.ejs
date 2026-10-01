@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="a-sec1 p-2" >
+    <h3><b>Available Rooms</b></h3>
+    <p>Choose your perfect room and book today</p>
+</div>
+
+<div class="cards-outer mt-3">
+<% for(let listing of allListings){ %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+
+        <div class="card listing-card" style="width: 28rem;">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image">
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h6><b><%= listing.title %></b></h6>
+                    <span class="para-tertiary">&#9733; <b class="para-primary">4.9</b>(83)</span>
+                </div>
+                <p class="para-primary"><%= listing.location %>, <%= listing.country %></p>
+                <p class="para-secondary" style="line-height: 0.5rem;"><b>&#8377;<%= listing.price.toLocaleString("en-IN") %></b> <span class="para-primary">/ night</span></p>
+            </div>
+        </div>
+    </a>
+<% } %>
+</div>

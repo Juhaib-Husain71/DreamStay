@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fs-3 ps-4" href="/listings">DreamStay</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menue</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body ms-lg-auto">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item pe-2">
+            <a class="nav-link"  href="/">Home</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="/listings">Hotels</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="/listings/new">Hosting</a>
+          </li>
+        </ul>
+        
+        <% if(!currUser) { %>
+          <form method="get" action="/users/signup" class="container-fluid justify-content-start mt-3 mt-lg-0">
+            <button class="btn btn-primary">Signup</button>
+          </form>
+
+          <form method="get" action="/users/login" class="container-fluid justify-content-start mt-3 mt-lg-0">
+            <button class="btn btn-primary">Login</button>
+          </form>
+        <% } %>
+
+        <% if(currUser) { %>
+          <form method="post" action="/users/logout" class="container-fluid justify-content-start">
+            <button class="btn btn-outline-danger">Logout</button>
+          </form>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
+</nav>

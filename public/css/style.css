@@ -1,0 +1,163 @@
+body{
+    font-family: Inter, sans-serif !important;
+}
+.container-fluid{
+    padding-left: 0 !important;
+}
+a {
+    text-decoration: none !important;
+}
+
+/* navbar */
+.navbar{
+    height: 5rem;
+}
+.navbar-brand{
+    font-weight: 750;
+    color: #00325A !important;
+}
+.nav-link{
+    font-size: 1.07rem !important;
+    font-weight: 400 !important; 
+    color: black !important;
+}
+.nav-link:hover{
+    color: #801515 !important;
+    text-decoration: underline !important;
+}
+
+/* footer */
+.f-outer{
+    background-color: #ebf1ff;
+    border-top: 1px solid #A0C9FF;
+}
+.f-sec{
+    max-width: 23%;
+}
+.f-sec h5 {
+    color: #263142;
+}
+
+.f-sec a{
+    color: #57423d;
+    font-size: 0.9rem;
+}
+.f-sec ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+}
+.sec1{
+    align-self: center;
+    font-size: 0.95rem;
+}
+
+/* home */
+.h-sec1{
+    height: 82vh;
+}
+.h-hero-img{
+    border-radius: 5rem 0 5rem 0;
+    background-size: cover;
+    background-image: url(https://img.staticmb.com/mbimages/interiorDesignerCMS/decorPartner/152/projectImage/2024-02-28.jpg.webp);
+}
+.host-card{
+    border-radius: 2.5rem;
+    height: 48vh;
+    color: white;
+    background: linear-gradient(45deg, #c12525, #DC2828, #E64E2F);
+    margin: 7rem 12rem 0 12rem;
+}
+.host-card-icon{
+    color: white;
+    font-size: 1.5rem;
+}
+.host-card-btn{
+    background-color: white !important; 
+    color: #07497D !important;
+}
+
+.para-primary{
+    color: #57423d;
+}
+.para-secondary{
+    color: #001C37;
+}
+.para-tertiary{
+    color: #C5533A;
+}
+
+/* common button */
+.main-btn{
+    background-color: #fe424d !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* about */
+.a-sec1{
+    background-color: #07497D;
+    color: white; 
+}
+.a-card{
+    width: 28rem; 
+    border-radius: 1rem !important; 
+    line-height: 1.7rem; 
+    background-color: #EAF1FF !important; 
+    border: 1px, solid, #A0C9FF !important;
+}
+
+/*index-cards*/
+.listing-card{
+    border: none !important;
+}
+.cards-outer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+.card-img-top{
+    height: 20rem;
+    border-radius: 0.75rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* card effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.15;
+    background-color: white;
+}
+
+/* show listing */
+.show-img{
+    height: 30rem;
+}
+
+/* review */
+.rev-outer{
+    backdrop-filter: blur(50px) !important;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 1.2rem;
+    /* box-shadow: wheat 15px 15px 5px 5px; */
+    box-shadow: 3px 4px 8px rgba(151, 204, 237, 0.5);
+    padding: 1rem;
+}
+
+/* map */
+#map{
+    height: 45vh;
+    width: 45vw;
+    border-radius: 1rem;
+}
+.map-outer{
+    padding-left: 10rem;
+}

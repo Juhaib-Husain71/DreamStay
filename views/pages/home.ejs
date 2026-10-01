@@ -1,0 +1,54 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<div class="h-sec1 row pt-5">
+    <div class="col mt-5 ms-5 p-5" >
+        <div class="mb-3"><h1><b>Forget Busy Work,</b></h1>
+        <h1>Start Next Vacation</h1>
+        </div>    
+        <p class="para-primary mb-3">we provide what you need to enjoy your holiday. Time to make another<br>memorable moments.</p>
+        <a href="/about"><button class="btn btn-primary">About us</button></a>
+    </div>
+
+    <div class="h-hero-img col me-3"></div>
+</div>
+
+<div class="h-sec2">
+    <h3 class="ms-5">Top Picks</h3>
+
+    <div class="cards-outer mt-3">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card listing-card" style="width: 28rem;">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h6><b><%= listing.title %></b></h6>
+                        <span class="para-tertiary">&#9733; <b class="para-primary">4.9</b>(83)</span>
+                    </div>
+                    <p class="para-primary"><%= listing.location %>, <%= listing.country %></p>
+                    <p class="para-secondary" style="line-height: 0.5rem;"><b>&#8377;<%= listing.price.toLocaleString("en-IN") %></b> <span style="color: #57423d;">/ night</span></p>
+                </div>
+            </div>
+            </a>
+        <% } %>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+        <a href="/listings"><button class="btn btn-primary">Show All Hotels</button></a>
+    </div>
+    
+</div>
+
+<div class="host-card d-flex justify-content-center align-items-center flex-column">
+    <p class="host-card-icon">
+        <i class="fa-regular fa-heart"></i>
+    </p>
+
+    <h1>Own a piece of the Dream</h1>
+    <p class="mt-3" style="text-align: center;">Host your extra space and help others find their next peaceful escape.<br> Join our community of hosts today.</p>
+    <div class="d-flex justify-content-center mt-3">
+        <a href="/listings/new"><button class="btn host-card-btn"><b>Become a Host</b></button></a>
+    </div>
+
+</div>
+
