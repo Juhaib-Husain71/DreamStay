@@ -41,7 +41,7 @@ DreamStay is a full-stack travel accommodation listing platform inspired by mode
 ## 📁 Project Structure
 
 ```bash
-wanderlust/
+DreamStay/
 ├── controllers/
 ├── models/
 ├── routes/
@@ -57,16 +57,6 @@ wanderlust/
 ├── app.js
 └── package.json
 ```
-
-## 📸 Screenshots
-
-Add project screenshots here to showcase:
-
-* Homepage
-* Listing page
-* New listing form
-* Login/signup page
-* Show page
 
 ## 🔐 Authentication
 
